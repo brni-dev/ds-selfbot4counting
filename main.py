@@ -8,7 +8,7 @@ class Client(discord.Client):
     async def on_ready(self):
         print(f'Selfbot {self.user} started!')
     async def on_message(self, message):
-        if message.author.id != self.user.id and message.channel.id in channel4counting:
+        if message.author.id != self.user.id and message.channel.id in channels4counting:
             if len(message.content) > 1999 or message.content.startswith('-'): return
             else:
                 try:
